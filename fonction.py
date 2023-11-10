@@ -1,11 +1,11 @@
 import random
 
 
-def peterNormalDamage() :
+def peter_normal_damage() :
     peter_DP=random.choice(peter_DP_list) #randomize the attack value of Peter
     return peter_DP
 
-def mangosNormalDamage():
+def mangos_normal_damage():
     mangos_DP=random.choice(mangos_DP_list) ##randomize the attack value of mangos
     return mangos_DP
 
