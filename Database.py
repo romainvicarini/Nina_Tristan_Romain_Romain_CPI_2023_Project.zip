@@ -4,7 +4,7 @@ peter_max_DP=6
 
 peter_DP=0
 
-peter_DP_list=[]
+peter_DP_list=[3,4,5,6,]
 
 peter_HP=20
 
@@ -18,7 +18,7 @@ mangos_max_DP=1
 
 mangos_DP=0
 
-mangos_DP_list=[]
+mangos_DP_list=[1,2]
 
 bestScores=[]
 
