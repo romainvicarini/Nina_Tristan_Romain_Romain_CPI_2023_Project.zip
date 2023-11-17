@@ -54,4 +54,22 @@ def snakeEyes():
         if a <= 1:
             mangos_HP = mangos_HP - peter_DP
             peter_HP = peter_HP + peter_DP
-    
+
+def last_chance_attack(peter_HP, damage):
+    if not hasattr(last_chance_attack, 'used') or not last_chance_attack.used:
+        percentage_lost = (20 - peter_HP) / 20 * 100
+        chance_of_success = min(percentage_lost, 100)
+        if random.uniform(0, 100) < chance_of_success:
+            # Hit
+            damage_dealt = damage * 3
+            print("Last chance attack hits! Dealing", damage_dealt, "damage.")
+            last_chance_attack.used = True  # Mark last chance attack as used
+            return damage_dealt
+        else:
+            # Miss
+            print("Last chance attack misses!")
+            last_chance_attack.used = True  # Mark last chance attack as used
+            return 0
+    else:
+        print("Last chance attack has already been used in this fight.")
+        return 0
