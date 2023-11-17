@@ -29,7 +29,7 @@ def attack(n):
                         peter_normal_damage()
 
 
-def normal():
+def normal_round():
         a = peterNormalDamage() 
         damage= a - mangos_armor_HP
         mangos_HP= mangos_HP - damage 
