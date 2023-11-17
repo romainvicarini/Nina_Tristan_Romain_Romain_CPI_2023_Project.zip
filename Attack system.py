@@ -41,6 +41,3 @@ def attack(a):
         special_attack(b)
 attack(a)
 
-                        #random.choice
-#def random_attack():
-
