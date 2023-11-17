@@ -2,10 +2,12 @@ import random
 
 
 def peter_normal_damage() :
+    global peter_DP_list
     peter_DP=random.choice(peter_DP_list) #give a random attack value of Peter
     return peter_DP
 
 def mangos_normal_damage():
+    global mangos_DP_list
     mangos_DP=random.choice(mangos_DP_list) #give a random attack value of mangos
     return mangos_DP
 
@@ -27,6 +29,17 @@ def attack(n):
                         lastchance = False
                         mangos_hp = mangos_hp-???*3 #hits for maximum damage multiplied by 3
                         peter_normal_damage()
+
+
+
+def mangos_turn():
+    global peter_HP,peter_armor_HP
+    mangos_damage= mangosNormalDamage()
+    damage = mangos_damage - peter_armor_HP
+    peter_HP= peter_HP - damage
+    print ("ouch ! the mangos attacks you, you lost",damage,"HP")
+    print("you have",peter_HP,"HP left")
+    return
 
 
 def peter_normal_turn():
