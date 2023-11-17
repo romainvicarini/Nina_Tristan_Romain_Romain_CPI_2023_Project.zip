@@ -31,11 +31,11 @@ def peter_normal_turn():
         return
 
 def snakeEyes():
-    global mangos_HP, Peter_HP
+    global mangos_HP, peter_HP,snakeEyes_coolDown
     a=0
     binaire = []
     c = mangos_HP
-
+    
     if snakeEyes_coolDown == 0:
         while c > 0:
             binaire.append(str(c % 2))
@@ -44,8 +44,15 @@ def snakeEyes():
             if i == "1":
                 a += 1
         if a <= 1:
-            mangos_HP = mangos_HP - peter_DP
+            peter_normal_turn()
             peter_HP = peter_HP + peter_DP
+            print ("you regained",peter_DP,"HP")
+            print("you have now",peter_HP,"HP")
+        else:
+            peter_normal_turn()
+        snakeEyes_coolDown=+ 2
+    else:
+        print("still in cooldown, please choose an other attack")
 
 def last_chance_attack(peter_HP, damage):
     if not hasattr(last_chance_attack, 'used') or not last_chance_attack.used:
