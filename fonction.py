@@ -29,7 +29,13 @@ def attack(n):
                         peter_normal_damage()
 
 
-
+def normal():
+        a = peterNormalDamage() 
+        damage= a - mangos_armor_HP
+        mangos_HP= mangos_HP - damage 
+        damage =str(damage) #just for the value in the print
+        print("you inflicted "+damage+" damage to the mongose") 
+        return 
 
 
     
