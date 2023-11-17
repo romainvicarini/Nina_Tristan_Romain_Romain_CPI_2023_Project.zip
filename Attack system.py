@@ -6,14 +6,15 @@ mangos_HP=10
 
 def peter_normal_damage() :
             peter_DP=random.choice(peter_DP_list) #give a random attack value of Peter
- def peter_normal_turn():
-            global mangos_armor_hp,mangos_HP
-            peter_damage = peterNormalDamage()
-            damage= peter_damage - mangos_armor_HP
-            mangos_HP= mangos_HP - damage
-            print("you inflicted",damage,"damage to the mongose !")
-            print("the mangos still have",mangos_HP,"HP")
-            return
+
+def peter_normal_turn():
+        global mangos_armor_hp,mangos_HP
+        peter_damage = peterNormalDamage()
+        peter_DP= peter_damage - mangos_armor_HP
+        mangos_HP= mangos_HP - damage
+        print("you inflicted",peter_DP,"damage to the mongose !")
+        print("the mangos still have",mangos_HP,"HP")
+        return
             
 def special_attack(b):
     while b!=0 and b!=1 and b!=2 and b!=3:
