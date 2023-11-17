@@ -15,7 +15,31 @@ def peter_normal_turn():
         print("you inflicted",peter_DP,"damage to the mongose !")
         print("the mangos still have",mangos_HP,"HP")
         return
-            
+
+def snakeEyes():
+    global mangos_HP, peter_HP,snakeEyes_coolDown
+    a=0
+    binaire = []
+    c = mangos_HP
+    
+    if snakeEyes_coolDown == 0:
+        while c > 0:
+            binaire.append(str(c % 2))
+            c //= 2   
+        for i in binaire:
+            if i == "1":
+                a += 1
+        if a <= 1:
+            peter_normal_turn()
+            peter_HP = peter_HP + peter_DP
+            print ("you regained",peter_DP,"HP")
+            print("you have now",peter_HP,"HP")
+        else:
+            peter_normal_turn()
+        snakeEyes_coolDown=+ 2
+    else:
+        print("still in cooldown, please choose an other attack")
+
 def special_attack(b):
             while b!=0 and b!=1 and b!=2 and b!=3:
                         print("Invalid choice. Please enter a valid option.")
@@ -43,3 +67,4 @@ def attack(a):
                         special_attack(b)
 attack(a)
 
+#nex time, continuer le combat tant que aucun est mort
