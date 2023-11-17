@@ -12,7 +12,7 @@ def mangos_normal_damage():
     return mangos_DP
 
 def mangos_turn():
-    global peter_HP,peter_armor_HP,mangos_DP
+    global peter_HP,peter_armor_HP,peter_DP
     mangos_damage= mangosNormalDamage()
     mangos_DP = mangos_damage - peter_armor_HP
     peter_HP= peter_HP - mangos_DP
@@ -21,6 +21,7 @@ def mangos_turn():
     return
 
 def peter_normal_turn():
+   
         global mangos_armor_hp,mangos_HP,peter_DP
         peter_damage = peterNormalDamage()
         peter_DP= peter_damage - mangos_armor_HP
