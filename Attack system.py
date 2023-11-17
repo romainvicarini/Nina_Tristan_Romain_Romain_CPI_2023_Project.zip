@@ -58,13 +58,18 @@ def special_attack(b):
         
         print("Executing a special attack, Peter inflicted", peter_DP, "\n")
 
+
 a=int(input("Oh no! A mangoose is coming.\nStart of the fight, choose your attack:\nNormal attack: enter 0\nSpecial attack: enter another value\n"))
 def attack(a):
             if a==0:
                         peter_normal_turn()
-            else:
+             else:
                         b=int(input("Choose your special attack: \n Defend: enter 1 \n Snake eyes: enter 2 \n Last chance: enter 3 \n If you want to go back to regular attack: enter 0\n")      
-                        special_attack(b)
-attack(a)
-
-#nex time, continuer le combat tant que aucun est mort
+                        special_attack(b)  
+while peter_HP>0 and mangos_HP>0:
+            a=int(input("Oh no! A mangoose is coming.\nStart of the fight, choose your attack:\nNormal attack: enter 0\nSpecial attack: enter another value\n"))
+            attack(a)
+if peter_HP<=0:
+            print("No! Peter has been defeated!")
+elif mangos_HP<=0:
+            print("The mangoose has been defeated! Peter wins!")
