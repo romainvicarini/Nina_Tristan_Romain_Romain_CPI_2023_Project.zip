@@ -36,5 +36,20 @@ def normal_turn():
         print("you inflicted",damage,"damage to the mongose !") 
         return 
 
+def snakeEyes():
+    global mangos_HP, Peter_HP
+    a=0
+    binaire = []
+    c = mangos_HP
 
+    if snakeEyes_coolDown == 0:
+        while c > 0:
+            binaire.append(str(c % 2))
+            c //= 2   
+        for i in binaire:
+            if i == "1":
+                a += 1
+        if a <= 1:
+            mangos_HP = mangos_HP - peter_DP
+            peter_HP = peter_HP + peter_DP
     
