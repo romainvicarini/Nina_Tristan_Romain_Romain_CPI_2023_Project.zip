@@ -19,13 +19,14 @@ def attack(n):
                 if n==1: #defend = armorPV *2 + regular attack
                     peter_armor_HP = peter_armor_HP*2
                     if peter_HP%2==0:
-                        #see regular attack
+                        peter_normal_damage()
                 if n==2: snake eyes #regular attack + DP inflicted = DP gained => fonction 'bin'
                     #see regular attack
                     peter_HP = peter_HP + peter_DP
                 if n==3: last chance #DP max *3 but sometimes miss the target
                         lastchance = False
                         mangos_hp = mangos_hp-???*3 #hits for maximum damage multiplied by 3
+                        peter_normal_damage()
 
 
 
