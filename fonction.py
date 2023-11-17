@@ -30,11 +30,10 @@ def attack(n):
 
 
 def normal_turn():
-        a = peterNormalDamage() 
-        damage= a - mangos_armor_HP
+        peter_damage= peterNormalDamage() 
+        damage= peter_damage - mangos_armor_HP
         mangos_HP= mangos_HP - damage 
-        damage =str(damage) #just for the value in the print
-        print("you inflicted "+damage+" damage to the mongose") 
+        print("you inflicted",damage,"damage to the mongose !") 
         return 
 
 
