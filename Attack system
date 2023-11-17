@@ -1,6 +1,6 @@
 def special_attack(b):
     while b!=0 and b!=1 and b!=2 and b!=3:
-        print("Invalid choice. Please enter a valid option.")
+print("Invalid choice. Please enter a valid option. \n")
         a=int(input("Choose your special attack: \n Defend: enter 1 \n Snake eyes: enter 2 \n Last chance: enter 3 \n If you want to go back to regular attack: enter 0\n"))
     if b==1: #Defend: armorPV *2 + regular attack
         peter_armor_HP = peter_armor_HP*2
