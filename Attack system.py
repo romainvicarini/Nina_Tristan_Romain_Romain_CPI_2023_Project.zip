@@ -36,10 +36,10 @@ def special_attack(b):
 
 a=int(input("Oh no! A mangoose is coming.\nStart of the fight, choose your attack:\nNormal attack: enter 0\nSpecial attack: enter another value\n"))
 def attack(a):
-    if a==0:
-        peter_normal_turn()
-    else:
-        b=int(input("Choose your special attack: \n Defend: enter 1 \n Snake eyes: enter 2 \n Last chance: enter 3 \n If you want to go back to regular attack: enter 0\n")      
-        special_attack(b)
+            if a==0:
+                        peter_normal_turn()
+            else:
+                        b=int(input("Choose your special attack: \n Defend: enter 1 \n Snake eyes: enter 2 \n Last chance: enter 3 \n If you want to go back to regular attack: enter 0\n")      
+                        special_attack(b)
 attack(a)
 
