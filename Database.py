@@ -24,6 +24,8 @@ bestScores=[]
 
 lunchbox=True
 
+mangos_armor_HP=0
+
 
 
 
