@@ -35,19 +35,18 @@ def attack(n):
 def mangos_turn():
     global peter_HP,peter_armor_HP
     mangos_damage= mangosNormalDamage()
-    damage = mangos_damage - peter_armor_HP
-    peter_HP= peter_HP - damage
-    print ("ouch ! the mangos attacks you, you lost",damage,"HP")
+    mangos_DP = mangos_damage - peter_armor_HP
+    peter_HP= peter_HP - peter_DP
+    print ("ouch ! the mangos attacks you, you lost",mangos_DP,"HP")
     print("you have",peter_HP,"HP left")
     return
-
 
 def peter_normal_turn():
         global mangos_armor_hp,mangos_HP
         peter_damage = peterNormalDamage()
-        damage= peter_damage - mangos_armor_HP
+        peter_DP= peter_damage - mangos_armor_HP
         mangos_HP= mangos_HP - damage
-        print("you inflicted",damage,"damage to the mongose !")
+        print("you inflicted",peter_DP,"damage to the mongose !")
         print("the mangos still have",mangos_HP,"HP")
         return
 
