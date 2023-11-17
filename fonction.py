@@ -53,7 +53,7 @@ def last_chance_attack(peter_HP, damage):
         chance_of_success = min(percentage_lost, 100)
         if random.uniform(0, 100) < chance_of_success:
             # Hit
-            damage_dealt = damage * 3
+            damage_dealt = peter_DP * 3
             print("Last chance attack hits! Dealing", damage_dealt, "damage.")
             last_chance_attack.used = True  # Mark last chance attack as used
             return damage_dealt
