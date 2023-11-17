@@ -17,18 +17,20 @@ def peter_normal_turn():
         return
             
 def special_attack(b):
-    while b!=0 and b!=1 and b!=2 and b!=3:
-        print("Invalid choice. Please enter a valid option.")
-        a=int(input("Choose your special attack: \n Defend: enter 1 \n Snake eyes: enter 2 \n Last chance: enter 3 \n If you want to go back to regular attack: enter 0\n"))
-    if b==1: #Defend: armorPV *2 + regular attack
-        peter_armor_HP = peter_armor_HP*2
-        if peter_HP%2==0:
-            peter_normal_turn()
-        print("Peter's armor is now", peter_armor_HP, "\n")
-    if b==2: #Snake eyes: regular attack + DP inflicted = DP gained => fonction 'bin'
-        snake_eyes()
-    if b==3: #Last chance: DP max *3 but sometimes miss the target
-        mangos_hp = mangos_hp-(peter_DP_list[3]*3) #hits for maximum damage multiplied by 3
+            while b!=0 and b!=1 and b!=2 and b!=3:
+                        print("Invalid choice. Please enter a valid option.")
+                        a=int(input("Choose your special attack: \n Defend: enter 1 \n Snake eyes: enter 2 \n Last chance: enter 3 \n If you want to go back to regular attack: enter 0\n"))
+            if b==0:
+                        peter_normal_turn()
+            elif b==1: #Defend: armorPV *2 + regular attack
+                        peter_armor_HP = peter_armor_HP*2
+                        if peter_HP%2==0:
+                                    peter_normal_turn()
+                        print("Peter's armor is now", peter_armor_HP, "\n")
+            elif b==2: #Snake eyes: regular attack + DP inflicted = DP gained => fonction 'bin'
+                        snake_eyes()
+            elif b==3: #Last chance: DP max *3 but sometimes miss the target
+                        mangos_hp = mangos_hp-(peter_DP_list[3]*3) #hits for maximum damage multiplied by 3
         
         print("Executing a special attack, Peter inflicted", peter_DP, "\n")
 
