@@ -29,12 +29,14 @@ def attack(n):
                         peter_normal_damage()
 
 
-def normal_turn():
-        peter_damage= peterNormalDamage() 
+def peter_normal_turn():
+        global mangos_armor_hp,mangos_HP
+        peter_damage = peterNormalDamage()
         damage= peter_damage - mangos_armor_HP
-        mangos_HP= mangos_HP - damage 
-        print("you inflicted",damage,"damage to the mongose !") 
-        return 
+        mangos_HP= mangos_HP - damage
+        print("you inflicted",damage,"damage to the mongose !")
+        print("the mangos still have",mangos_HP,"HP")
+        return
 
 def snakeEyes():
     global mangos_HP, Peter_HP
