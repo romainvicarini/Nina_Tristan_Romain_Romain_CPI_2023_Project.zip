@@ -12,7 +12,7 @@ def peter_normal_turn():
             peter_damage = peterNormalDamage()
             peter_DP= peter_damage - mangos_armor_HP
             mangos_HP= mangos_HP - peter_DP
-            print("You inflicted", peter_DP,"damage to the mongose !")
+            print("You inflicted", peter_DP,"damage to the mongose!")
             print("the mangose is still have.",mangos_HP,"HP")
             return
 
