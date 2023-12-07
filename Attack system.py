@@ -3,6 +3,30 @@ peter_DP_list=[3,4,5,6,]
 peter_HP=20
 peter_armor_HP=1
 mangos_HP=10
+peter_DP_list = [3, 4, 5, 6]
+
+max_peter_DP = max(peter_DP_list)
+fang_add_values = [7, 8]
+
+
+def fang_use(lst, max_value, add_values):
+    global max_peter_DP, fang_add_values, peter_DP_list
+
+    new_peter_max_DP = lst.copy()
+
+    if new_peter_max_DP[-1] == max_value:
+        new_peter_max_DP.extend(fang_add_values)
+        for i in range(len(fang_add_values)):
+            fang_add_values[i] += 1
+    return new_peter_max_DP
+
+peter_DP_list = fang_use(peter_DP_list, max_peter_DP, fang_add_values)
+
+print(peter_DP_list)
+print(fang_add_values)
+
+min_peter_DP=min(peter_DP_list)
+
 
 def peter_normal_damage() :
             peter_DP=random.choice(peter_DP_list) #give a random attack value of Peter
