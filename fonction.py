@@ -1,6 +1,6 @@
 import random
 
-
+test
 def peter_normal_damage() :
     global peter_DP_list
     peter_DP=random.choice(peter_DP_list) #give a random attack value of Peter
