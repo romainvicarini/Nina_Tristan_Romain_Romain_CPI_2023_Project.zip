@@ -1,5 +1,5 @@
 import random
-
+test
 
 def peter_normal_damage() :
     global peter_DP_list
